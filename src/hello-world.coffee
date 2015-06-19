@@ -25,4 +25,4 @@ module.exports = (robot) ->
     if moment.tz("America/New_York").isBetween(beer_time, midnight)
       msg.reply "It's :beer: o'clock right now!"
     else
-      msg.reply ":beer: o'clock is #{five_pm.fromNow()}"
+      msg.reply ":beer: o'clock is #{beer_time.fromNow()}"
