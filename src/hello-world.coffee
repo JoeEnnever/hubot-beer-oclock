@@ -20,8 +20,10 @@ module.exports = (robot) ->
     five_pm = moment.tz("17:00", "h:mm", "America/New_York")
     two_thirty_pm = moment.tz("14:30", "h:mm", "America/New_York")
     midnight = moment.tz("23:59", "h:mm", "America/New_York")
-    month = moment.tz("America/New_York").month()
-    beer_time = if (month >= 5 && month <= 8) then two_thirty_pm else five_pm
+    now = moment.tz("America/New_York")
+    month = now.month()
+    day = now.day()
+    beer_time = if (day == 5 && month >= 5 && month <= 8) then two_thirty_pm else five_pm
     if moment.tz("America/New_York").isBetween(beer_time, midnight)
       msg.reply "It's :beer: o'clock right now!"
     else
