@@ -4,6 +4,10 @@
   "version": "1.0.0",
   "author": "Joe Ennever <joe.ennever@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/JoeEnnever/hubot-beer-oclock.git"
+  },
   "keywords": [
     "hubot",
     "hubot-scripts"
