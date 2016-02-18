@@ -15,7 +15,7 @@
 #   tombell
 
 module.exports = (robot) ->
-  robot.hear /beer/, (msg) ->
+  robot.hear /beer.*\?/, (msg) ->
     moment = require('moment-timezone')
     five_pm = moment.tz("17:00", "h:mm", "America/New_York")
     two_thirty_pm = moment.tz("14:30", "h:mm", "America/New_York")
